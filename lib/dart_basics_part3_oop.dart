@@ -1,3 +1,5 @@
+import 'package:dart_basics/dart_basics_part4_oop.dart';
+
 void main() {
   String studentName = 'Ahmed';
   int studentAge = 15;
@@ -14,19 +16,30 @@ void main() {
   // print(sudent1.studentAge);
   // Student student2 = Student();
   // print(student2.studentAge);
-  Student student1 = Student('studentName', 15, 69526);
-  print(student1.studentId);
-  student1.takeAssingmnet();
-  Student student2 = Student('Amm', 65, 150);
-  print(student2.studentId);
-  var doc1 = Doctor('name', 15, 5247854);
-  // print(doc1.age);
-  // doc1.makeExams();
-  doc1.goToFaculty();
-  var ta = TA('name', 4, 55);
-  // ta.correctExams();
-  var fa = Faculty('aa', 2, 245);
-  fa.goToFaculty();
+  // Student student1 = Student('studentName', 15, 69526);
+  // print(student1.studentId);
+  // student1.takeAssingmnet();
+  // Student student2 = Student('Amm', 65, 150);
+  // print(student2.studentId);
+  // var doc1 = Doctor('name', 15, 5247854);
+  // // print(doc1.age);
+  // // doc1.makeExams();
+  // doc1.goToFaculty();
+  // var ta = TA('name', 4, 55);
+  // // ta.correctExams();
+  // var fa = Faculty('aa', 2, 245);
+  // fa.goToFaculty();
+  // Faculty faa = Doctor('name', 15, 2);
+
+// var s2 =Shape();
+// s2.width=15;
+// print(s2.width);
+
+List<int> data=[4,5,6,];
+List<Faculty> objs=[Faculty('name',4, 4),Doctor('name',4, 4),TA('name',4, 4)];
+
+Faculty object=Faculty('name',4, 4);
+Faculty object2 = Faculty('name',4, 4);
 }
 
 class Student {
@@ -59,10 +72,23 @@ class A {
 //parent class == super calss
 class Faculty {
   final String name;
-  final int age;
+  int age;
   final int id;
+  // void setAgeValue(int age) {
+  //   if (age <= 0) {
+  //     print('error');
+  //   } else {
+  //     this.age = age;
+  //   }
+  // }
 
-  Faculty(this.name, this.age, this.id);
+  Faculty(this.name, this.age, this.id) {
+    if (age <= 0) {
+      print('error');
+    } else {
+      print(age);
+    }
+  }
   void goToFaculty() {
     print('goToFaculty');
   }
